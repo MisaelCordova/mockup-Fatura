@@ -1,56 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/icon_useall.png">
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
     <script src="index.js" defer></script>
-    <title>Document</title>
+
+    <title>Cadastro</title>
+
 </head>
+
 <body>
-    <div class="cilindro">
-        <div id="btnModal" class="estilobtnModal">Adicionar cilindro</div>
+    <div id="dados">
+
+        <h1>Registro de <span>Usuário</span></h1>
+        <p>Faça seu cadastro para conseguir <br> fazer o login e ter acesso a sua UC</p>
+
+        <section class="cad">
+            <form >
+
+                <fieldset>
+
+                    <li>
+                        <label for="name">Codigo da uc</label>
+                        <input id="name" type="text" name="name" placeholder="Digite o código da UC" autofocus
+                            autocomplete="off">
+                    </li>
+
+                    <li>
+                        <label for="documento">Cpf/CNPJ:</label>
+                        <input type="text" name="documento" id="documento" list="listaDocumento" placeholder="Digite o cpf/cnpj">
+                        <datalist id="listaDocumento">
+                          
+                        </datalist>
+                    </li>
+                    <li>
+                        <label for="cpfcnpj"> <b>Competencia:</b> </label>
+                        <input class="cpfcnpj" id="cpfcnpj" type="date" name="cpfcnpj" placeholder="CPF/CNPJ"
+                            autocomplete="off">
+                    </li>
+                    <li>
+                        <label for="email">Valor Total</label>
+                        <label for="email">R$150</label>
+                     
+                    </li>
+                  
+                    <li><div id="btnModal" class="estilobtnModal">Adicionar item</div></li>
+
+                </fieldset>
+
+            </form>
+        </section>
     </div>
+    <div id="imagem"><img src="assets/logo_useall.png" alt="Logo da useall"></div>
+
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-            <h1 class="text">Dados do cilindro</h1>
+            <h1 class="text">Itens</h1>
             <form>
                 <div id="above">
                     <div id="left">
                         <div class="text">
                             <input id="id" type="hidden" value="">
-                            <label for="nSelo"> Nº Selo sequencial:</label>
-                            <input id="nSelo" type="text" value="teste" required>
+                            <label for="nSelo">Descrição</label>
+                            <input id="nSelo" type="text" required>
                         </div>
                         <div class="text">
-                            <label for="marca">Marca do cilindro:</label>
-                            <input id="marca" type="text" value="teste" required>
+                            <label for="marca">Quantidade: </label>
+                            <input id="marca" type="number" value="teste" required>
                         </div>
                     </div>
                     <div id="right">
                         <div class="text">
-                            <label> Volume (L):</label>
-                            <input id="volume" type="number" value="123" required>
+                            <label> Valor Unitario:</label>
+                            <input id="volume" type="number" required>
                         </div>
                     </div>
-                </div>
-                <div id="bellow">
-                    <label for="nSerie">Numero de série:</label>
-                    <input id="nSerie" type="text" value="123" required>
-                </div>
-                <div id="bellow">
-                    <label for="dfFabri">Data fabricação:</label>
-                    <input id="dfFabri" type="date">
-                </div>
-                <div id="bellow">
-                    <label for="dtReteste">Data Resteste:</label>
-                    <input id="dtReteste" type="date">
-                </div>
-                <div id="bellow">
-                    <label for="massa">Massa (kg):</label>
-                    <input id="massa" type="number" type="textfield" value="1" required>
                 </div>
                 <input class="estilobtnModal" type="submit" value="Salvar">
             </form>
