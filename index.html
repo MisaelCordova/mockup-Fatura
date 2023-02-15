@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="cilindro">
+        <div id="btnModal" class="estilobtnModal">Adicionar cilindro</div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+            <h1 class="text">Dados do cilindro</h1>
+            <form>
+                <div id="above">
+                    <div id="left">
+                        <div class="text">
+                            <input id="id" type="hidden" value="">
+                            <label for="nSelo"> Nº Selo sequencial:</label>
+                            <input id="nSelo" type="text" value="teste" required>
+                        </div>
+                        <div class="text">
+                            <label for="marca">Marca do cilindro:</label>
+                            <input id="marca" type="text" value="teste" required>
+                        </div>
+                    </div>
+                    <div id="right">
+                        <div class="text">
+                            <label> Volume (L):</label>
+                            <input id="volume" type="number" value="123" required>
+                        </div>
+                    </div>
+                </div>
+                <div id="bellow">
+                    <label for="nSerie">Numero de série:</label>
+                    <input id="nSerie" type="text" value="123" required>
+                </div>
+                <div id="bellow">
+                    <label for="dfFabri">Data fabricação:</label>
+                    <input id="dfFabri" type="date">
+                </div>
+                <div id="bellow">
+                    <label for="dtReteste">Data Resteste:</label>
+                    <input id="dtReteste" type="date">
+                </div>
+                <div id="bellow">
+                    <label for="massa">Massa (kg):</label>
+                    <input id="massa" type="number" type="textfield" value="1" required>
+                </div>
+                <input class="estilobtnModal" type="submit" value="Salvar">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
